@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-   margin: 50px 40px;
+   margin: 50px auto;
   max-width: $desktop-width;
   height: 223px;
   @include respond-to("small") {
