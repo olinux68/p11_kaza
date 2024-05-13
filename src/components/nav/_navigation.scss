@@ -30,7 +30,7 @@
       display: flex;
      
       @include respond-to("small") {
-        margin-right: 35px;
+        margin-right: 25px;
       }
       a {
         text-decoration: none;

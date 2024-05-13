@@ -15,10 +15,7 @@
   height: 223px;
   @include respond-to("small") {
     border-radius: 15px;
-    margin: 0 35px;
-
-    //margin: 19.71px 25px 0 25px;
-   
+    margin: 0 25px;   
   }
   &__title {
     font-size: 48px;
