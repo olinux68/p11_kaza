@@ -1,0 +1,50 @@
+.footer {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-footer-color;
+  position: relative;
+  height: 209px;
+  max-width: 100%;
+
+
+  @include respond-to("small") {
+
+   width: calc(100vw);
+
+   
+   margin: 0 auto 0 auto;
+  }
+  &__logo {
+    width: 122px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  &__copyright {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $white;
+    bottom: 20px;
+
+    @include respond-to("small") {
+      bottom: 62px;
+    }
+    &--pic {
+      margin-right: 10px;
+      width: 15px;
+      color: $white;
+    }
+    &--txt {
+      font-size: 24px;
+      color: $white;
+      @include respond-to("small") {
+        overflow: auto;
+        font-size: 12px;
+     
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Montserrat-1";
+  src: url(../assets/fonts/Montserrat-Regular.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat-1", sans-serif;
+}
+
+body {
+  font-family: "Montserrat-1", sans-serif;
+  width: 100%;
+  padding: 40px 100px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.header__logo img {
+  height: 64px;
+}
+
+.header__nav__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+}
+
+.header__nav__ul a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.header__nav__ul a li {
+  color: #ff6060;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.header__nav__ul a li:hover {
+  color: #282c34;
+}
+
+.header__nav__ul--active {
+  position: relative;
+}
+
+.header__nav__ul--active::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #ff6060;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.banner {
+  border-radius: 25px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6d6d6d58), to(#6d6d6d58)), url(../../assets/img/banniere-img.png);
+  background-image: linear-gradient(#6d6d6d58, #6d6d6d58), url(../../assets/img/banniere-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px auto;
+  max-width: 1240px;
+  height: 223px;
+}
+
+.banner__title {
+  font-size: 48px;
+  color: #f3f3f3;
+}
+
+.main {
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 829px;
+  margin: 20px auto;
+  max-width: 1240px;
+}
+/*# sourceMappingURL=index.css.map */

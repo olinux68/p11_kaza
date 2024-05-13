@@ -1,0 +1,77 @@
+@import "../../styles/Utlis/mixin";
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $desktop-width;
+  margin: auto;
+  @include respond-to("small") {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   // margin-left: 20px;
+  }
+  &__logo {
+    img {
+      height: 64px;
+      @include respond-to("small") {
+        height: 47px;
+      }
+    }
+  }
+  &__nav {
+    &__ul {
+      display: flex;
+     
+      @include respond-to("small") {
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 24px;
+        margin: 20px 20px 20px 50px;
+        @include respond-to("small") {
+          font-size: 16px;
+          margin: 5px;
+          text-transform: uppercase;
+        }
+        li {
+          color: $color-3;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            color: $color-3;
+          }
+        }
+      }
+      &--active {
+        position: relative;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 0;
+          background: $color-3;
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-animation: anim 0.3s ease forwards;
+          animation: anim 0.6s ease forwards;
+          @-webkit-keyframes anim {
+            to {
+              width: 100%;
+            }
+          }
+          @keyframes anim {
+            to {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+::-webkit-scrollbar {                                       // Sélecteur pour la barre de défilement globale dans les navigateurs WebKit
+  width: 0px;                                               // Définit la largeur de la barre de défilement à 0px, la rendant invisible
+  background-color: #ff60604d;                            // Définit la couleur de fond de la barre de défilement
+  border-bottom-right-radius: $primary-radius;              // Définit le rayon du coin inférieur droit de la barre de défilement
+  border-top-right-radius: $primary-radius;                 // Définit le rayon du coin supérieur droit de la barre de défilement
+  animation-duration: 2s;                                   // Définit la durée de l'animation de la barre de défilement
+  animation-fill-mode: both;                                // Définit le mode de remplissage de l'animation de la barre de défilement
+}
+
+::-webkit-scrollbar-thumb {                                 // Sélecteur pour le pouce de la barre de défilement (la partie que vous déplacez) dans les navigateurs WebKit
+  background-color: #f99595c9;                            // Définit la couleur de fond du pouce de la barre de défilement
+  border-bottom-right-radius: $primary-radius;              // Définit le rayon du coin inférieur droit du pouce de la barre de défilement
+  border-top-right-radius: $primary-radius;                 // Définit le rayon du coin supérieur droit du pouce de la barre de défilement
+}
+
+.main:hover::-webkit-scrollbar {                            // Sélecteur pour la barre de défilement lorsqu'on survole l'élément avec la classe .main dans les navigateurs WebKit
+  width: 15px;                                              // Change la largeur de la barre de défilement à 15px lorsqu'on survole l'élément .main
+  animation-name: slideout;                                 // Applique l'animation nommée "slideout" à la barre de défilement lorsqu'on survole l'élément .main
+}

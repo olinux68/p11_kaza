@@ -1,0 +1,42 @@
+.card {
+  // Définit les styles pour la classe .card
+  background: linear-gradient($card-linear-gradiant), $color-primary; // Applique un dégradé linéaire comme arrière-plan basé sur la variable $card-linear-gradiant, avec une couleur de fond de secours basée sur la variable $color-primary
+  border-radius: $secondary-radius; // Applique un rayon de bordure basé sur la variable $secondary-radius
+  margin: 20px; // Applique une marge extérieure de 20px
+  height: $card-size; // Définit la hauteur de la carte basée sur la variable $card-size
+  width: $card-size; // Définit la largeur de la carte basée sur la variable $card-size
+  position: relative; // Positionne la carte de manière relative pour permettre le positionnement absolu des enfants
+  @include respond-to("small") {
+    // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+    max-width: $mobile-width; // Définit une largeur maximale basée sur la variable $mobile-width pour les petits écrans
+    height: $card-size-mobile-height; // Définit la hauteur de la carte basée sur la variable $card-size-mobile-height pour les petits écrans
+    margin: 20px 0; // Applique une marge extérieure de 20px en haut et en bas, et de 0px à gauche et à droite pour les petits écrans
+  }
+  &--img {
+    // Définit les styles pour la classe .card--img (modificateur de .card)
+    height: 270px; // Définit une hauteur fixe
+    width: $card-size; // Définit la largeur basée sur la variable $card-size
+    object-fit: cover; // Fait en sorte que l'image couvre tout l'élément sans déformation
+    border-top-left-radius: $secondary-radius; // Applique un rayon de bordure en haut à gauche basé sur la variable $secondary-radius
+    border-top-right-radius: $secondary-radius; // Applique un rayon de bordure en haut à droite basé sur la variable $secondary-radius
+    @include respond-to("small") {
+      // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+      max-width: $mobile-width; // Définit une largeur maximale basée sur la variable $mobile-width pour les petits écrans
+      height: 185px; // Définit une hauteur fixe pour les petits écrans
+    }
+  }
+
+  &__title {
+    // Définit les styles pour la classe .card__title (élément de .card)
+    bottom: 2px; // Positionne l'élément à 2px du bas de son parent positionné (ici, .card)
+    display: flex; // Utilise flexbox pour la mise en page
+    align-items: center; // Centre les éléments flex sur l'axe vertical
+    color: $white; // Définit la couleur du texte basée sur la variable $white
+    font-size: 18px; // Définit la taille de la police
+    font-weight: 500; // Définit l'épaisseur de la police
+    margin: 10px; // Applique une marge intérieure de 10px
+    position: absolute; // Positionne l'élément de manière absolue par rapport à son parent positionné (ici, .card)
+    height: 50px; // Définit une hauteur fixe
+    width: 80%; // Définit la largeur comme 80% de la largeur de son parent
+  }
+}

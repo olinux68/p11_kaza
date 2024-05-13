@@ -1,0 +1,9 @@
+@keyframes slideout {                                    // Définition d'une animation nommée "slideout"
+  0% {                                                   // Au début de l'animation (0% du temps)
+    width: 0px;                                          // La largeur de l'élément est de 0 pixel
+  }
+
+  100% {                                                 // À la fin de l'animation (100% du temps)
+    width: 15px;                                         // La largeur de l'élément est de 15 pixels
+  }
+} ;

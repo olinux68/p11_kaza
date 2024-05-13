@@ -1,0 +1,66 @@
+@import "./Utlis/keyframe";
+@import "./Utlis/mixin";
+
+@font-face {
+  font-family: "Montserrat-1";
+  src: url(../assets/fonts/Montserrat-Regular.otf);
+}
+
+$font-1: "Montserrat-1", sans-serif;
+
+$color-primary: #ff6060;
+$color-3: #282c34;
+$background-color: #f6f6f6;
+$background-footer-color: #000000;
+$white: rgb(255, 255, 255);
+$card-linear-gradiant: #ffffff00, #00000048;
+
+$desktop-width: 1440px;
+$mobile-width: 335px;
+$card-size-mobile-height: 255px;
+$card-size: 340px;
+$primary-radius: 25px;
+$secondary-radius: 10px;
+$tertiary-radius: 5px;
+$tag-width: 115px;
+$tag-height: 25px;
+$tag-font: 14px;
+$tag-font-mobile: 10px;
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1440px,
+) !default;
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: $font-1;
+}
+
+body {
+  font-family: $font-1;
+
+  margin: 8px;
+
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}

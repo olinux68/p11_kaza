@@ -1,0 +1,14 @@
+@import "./settings"; // Importation des paramètres globaux de style
+@import "../components/nav/navigation"; // Importation des styles pour le composant de navigation
+@import "../components/banner/banner"; // Importation des styles pour le composant de bannière
+@import "../components/main/main"; // Importation des styles pour le composant principal
+@import "../components/collapse/collapse"; // Importation des styles pour le composant d'effondrement
+@import "../components/footer/footer"; // Importation des styles pour le composant de pied de page
+@import "../components/card/card"; // Importation des styles pour le composant de carte
+@import "../pages/fiche/fiche"; // Importation des styles pour la page de fiche
+@import "../components/slider/slider"; // Importation des styles pour le composant de curseur
+@import "../components/tag/tags"; // Importation des styles pour le composant de balises
+@import "../components/collapse/fiche__collapse"; // Importation des styles pour le composant d'effondrement de la fiche
+@import "./Utlis/scrollbar"; // Importation des styles pour la barre de défilement
+@import "../pages/404/404"; // Importation des styles pour la page 404
+@import "./Utlis/keyframe"; // Importation des animations keyframe

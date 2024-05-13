@@ -1,0 +1,43 @@
+.main__404 {                                                  // Définit les styles pour la classe .main__404
+  margin: 66px auto;                                          // Définit les marges autour de l'élément
+  max-width: 1440px;                                          // Définit une largeur maximale
+  display: flex;                                              // Utilise flexbox pour la mise en page
+  flex-flow: column nowrap;                                   // Définit la direction du flex (column) et le comportement de l'enroulement (nowrap)
+  justify-content: center;                                    // Centre les éléments flex sur l'axe horizontal
+  align-items: center;                                        // Centre les éléments flex sur l'axe vertical
+  color: $color-primary;                                      // Définit la couleur du texte basée sur la variable $color-primary
+  @include respond-to("small") {                              // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+    margin: 195px auto;                                       // Change les marges pour les petits écrans
+    max-width: $mobile-width;                                 // Change la largeur maximale pour les petits écrans
+  }
+  &--title {                                                  // Définit les styles pour la classe .main__404--title (enfant de .main__404)
+    margin: 100px auto;                                       // Définit les marges autour de l'élément
+    font-size: 288px;                                         // Définit la taille de la police
+    font-weight: 700;                                         // Définit le poids de la police
+    @include respond-to("small") {                            // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+      font-size: 96px;                                        // Change la taille de la police pour les petits écrans
+      margin: 0 auto;                                         // Change les marges pour les petits écrans
+    }
+  }
+  &--txt {                                                    // Définit les styles pour la classe .main__404--txt (enfant de .main__404)
+    font-size: 36px;                                          // Définit la taille de la police
+    margin-bottom: 182px;                                     // Définit la marge en bas de l'élément
+    @include respond-to("small") {                            // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+      text-align: center;                                     // Centre le texte pour les petits écrans
+      font-size: 18px;                                        // Change la taille de la police pour les petits écrans
+      margin-bottom: 133px auto;                              // Change la marge en bas pour les petits écrans
+    }
+  }
+  &--btn {                                                    // Définit les styles pour la classe .main__404--btn (enfant de .main__404)
+    font-size: 18px;                                          // Définit la taille de la police
+    color: $color-3;                                          // Définit la couleur du texte basée sur la variable $color-primary
+    margin-bottom: 159px;                                     // Définit la marge en bas de l'élément
+    &:hover {                                                 // Définit les styles pour l'état hover de l'élément
+      color: $color-3;                                        // Change la couleur du texte lors du survol
+    }
+    @include respond-to("small") {                            // Applique les styles suivants lorsque la condition du mixin respond-to est remplie (écrans petits)
+      font-size: 14px;                                        // Change la taille de la police pour les petits écrans
+      margin-bottom: 0;                                       // Supprime la marge en bas pour les petits écrans
+    }
+  }
+}

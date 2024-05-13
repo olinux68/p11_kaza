@@ -1,0 +1,33 @@
+.fiche__tags {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20PX;
+    margin: 20px 0;
+   
+  }
+}
+
+.tag {
+  
+  border-radius: $secondary-radius;
+  color: $white;
+  background-color: $color-primary;
+  padding: 5px 10px;
+  
+  @include respond-to("small") {
+    margin: 10px 10px 10px 0;
+    border-radius: $tertiary-radius;
+  }
+  &__name {
+    //font-size: $tag-font;
+    @include respond-to("small") {
+     // font-size: $tag-font-mobile;
+      
+    }
+  }
+}

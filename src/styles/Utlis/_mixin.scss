@@ -1,0 +1,12 @@
+
+
+@mixin respond-to($breakpoint) {                                     // Définit un mixin nommé "respond-to" qui prend un argument $breakpoint
+  @if map-has-key($breakpoints, $breakpoint) {                       // Vérifie si la clé $breakpoint existe dans la map $breakpoints
+    @media (max-width: map-get($breakpoints, $breakpoint)) {         // Si oui, génère une requête media avec la valeur correspondante à la clé $breakpoint
+      @content;                                                      // Injecte le contenu qui sera passé au mixin lors de son utilisation
+    }
+  } @else {                                                          // Si la clé $breakpoint n'existe pas dans la map $breakpoints
+    @warn "Ce format n'existe pas `#{$breakpoint}`. "                // Génère un avertissement
+        + "Les formats existants sont : #{map-keys($breakpoints)}."; // Affiche les clés existantes dans la map $breakpoints
+  }
+}
