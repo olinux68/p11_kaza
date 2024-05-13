@@ -33,7 +33,7 @@
 }
 
 .banner_about {
-  border-radius: $primary-radius;
+  border-radius: 15px;
   background-image: linear-gradient(#6d6d6d58, #6d6d6d58), url(../../assets/img/banniere-about-img.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -47,6 +47,6 @@
   @include respond-to("small") {
     border-radius: 10px;
     height: 223px;
-    margin: 19.71px auto 19.71px auto;
+    margin: 35px 25px 35px ;
   }
 }
