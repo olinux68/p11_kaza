@@ -1,12 +1,14 @@
 .footer {
-  margin: 0;
+ //margin: 0;;
+  margin-left: -8px;
+  margin-right: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $background-footer-color;
   position: relative;
   height: 209px;
-  max-width: 100%;
+ // max-width: 100%;
 
 
   @include respond-to("small") {
@@ -14,7 +16,7 @@
    width: calc(100vw);
 
    
-   margin: 0 auto 0 auto;
+   //margin: 0 auto 0 auto;
   }
   &__logo {
     width: 122px;
