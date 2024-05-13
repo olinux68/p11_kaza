@@ -6,13 +6,16 @@
   justify-content: space-between;
   align-items: center;
   max-width: $desktop-width;
-  margin: auto;
+  margin-left: 35px;
+    margin-top: 50px;
+    margin: 50px 40px;
+ // margin: auto;
   @include respond-to("small") {
     max-width: 100%;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
-   // margin-left: 20px;
+    margin-left: 35px;
   }
   &__logo {
     img {
